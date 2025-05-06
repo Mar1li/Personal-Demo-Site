@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marili Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: #0e1a2b;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      background: linear-gradient(to right, #16222a, #3a6073);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      background: #0e1a2b;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .social a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.2rem;
+    }
+    .login-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .login-box {
+      background: white;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .hidden { display: none; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .timeline-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .timeline-item h3 {
+      color: #1e90ff;
+      font-size: 1.6rem;
+    }
+    .timeline-item p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-box">
+      <h2>Login to Access</h2>
+      <form onsubmit="event.preventDefault(); login()">
+        <input type="email" placeholder="Email" required id="email">
+        <input type="password" placeholder="Password" required id="password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <h2>Marili Vision</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#timeline">Timeline</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to Marili Vision</h1>
+    <p>Where passion meets progress in tech, fitness, and life</p>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I'm Noam Marili, a 16-year-old student passionate about self-improvement, computer science, and data analysis. I speak native English, have lived in New York for three years, and thrive on discipline and routine. I'm actively pursuing knowledge in Java, Android development, web design, and data analytics including SQL.</p>
+    <p>I love fitness and have years of experience in sports like soccer, tennis, basketball, and running. I run daily, and my personal record is nearly 38 km in one session. My mindset is always about pushing limits and growing in every area of life.</p>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <h2>Achievements</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Computer Science</h3>
+        <p>Completed the 8200 Academy program. Skilled in Java, JavaScript, CSS, HTML. Developed multiple web and game projects, with hands-on Android app experience.</p>
+      </div>
+      <div class="card">
+        <h3>Data Analysis</h3>
+        <p>Currently enrolled in a data analytics course, focusing on real-world skills and SQL. Capable of using tools to draw insights and solve problems.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Built responsive sites from scratch using HTML, CSS, JavaScript. Finished multiple full courses and applying these skills in personal projects.</p>
+      </div>
+      <div class="card">
+        <h3>Sports & Fitness</h3>
+        <p>Years of sports experience in soccer, tennis, basketball, and endurance running. Daily runner, personal best: 38 km. Strong discipline and physical endurance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="section">
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>2015 - 2018</h3>
+        <p>Lived in New York, which influenced my growth in both personal and professional aspects.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2021</h3>
+        <p>Dreamed of learning computers and technology, setting the foundation for my future career in this field.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2022</h3>
+        <p>Achieved many milestones in running and fitness, including completing several personal bests.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2023</h3>
+        <p>Started learning Java, HTML, CSS, and Data Analysis. Built 5 professional websites and began contributing to open-source projects.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2024</h3>
+        <p>Started learning Android and game development. Completed the 8200 Academy program in advanced computer science. Developed several Android apps and games.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2025</h3>
+        <p>Pursuing knowledge in many areas of computing, including Web Design,and expanding Android application skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Follow me on social media:</p>
+    <div class="social">
+      <a href="https://instagram.com/noammarili" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Noam Marili. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Check if user is logged in
+    window.onload = function() {
+      if(localStorage.getItem('loggedIn') === 'true') {
+        document.getElementById('loginScreen').classList.add('hidden');
+      }
+    };
+
+    // Simple login – allows ANY login and saves login state
+    function login() {
+      localStorage.setItem('loggedIn', 'true');  // Save login state
+      document.getElementById('loginScreen').classList.add('hidden'); // Hide login screen
+    }
+  </script>
+
+</body>
+</html>
